@@ -18,7 +18,7 @@
   }
 
   function getCurrentFromLatLon(lat, lon) {
-    var url = "https://api.openweathermap.org/data/2.5/weather?";
+    var url = "http://api.openweathermap.org/data/2.5/weather?";
     url += 'lat=' + lat + '&';
     url += 'lon=' + lon + '&';
     url += 'units=imperial&'
@@ -27,9 +27,9 @@
     var request = new XMLHttpRequest();
     request.open('GET', url, true);
     
-    request.setRequestHeader("Access-Control-Allow-Origin", "*");
-    request.setRequestHeader("Access-Control-Allow-Methods", "GET");
-    request.setRequestHeader('Access-Control-Allow-Header', 'Origin, Content-Type, X-Auth-Token');
+//     request.setRequestHeader("Access-Control-Allow-Origin", "*");
+//     request.setRequestHeader("Access-Control-Allow-Methods", "GET");
+//     request.setRequestHeader('Access-Control-Allow-Header', 'Origin, Content-Type, X-Auth-Token');
 
     request.onload = function () {
       if (request.status >= 200 && request.status < 400) {
@@ -48,7 +48,7 @@
   }
 
   function getFiveDayFromLatLon(lat, lon) {
-    var url = "https://api.openweathermap.org/data/2.5/forecast/daily?";
+    var url = "http://api.openweathermap.org/data/2.5/forecast/daily?";
     url += 'cnt=6&';
     url += 'lat=' + lat + '&';
     url += 'lon=' + lon + '&';
