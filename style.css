@@ -1,0 +1,214 @@
+/****
+General Styling
+*****/
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  background: lightslategrey;
+}
+
+.container {
+  max-width: 75vw;
+  height: 90vh;
+  margin: 10px auto;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 300;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.flex-container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  flex-wrap: nowrap
+}
+
+.flex-column {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+.flex-10{
+  width: 10%;
+}
+.flex-50{
+  width: 50%;
+}
+.flex-60{
+  width: 60%;
+}
+.flex-30{
+  width: 30%;
+}
+.flex-padding-20{
+  padding-right: 20%;
+}
+
+.justify-start{
+  -webkit-justify-content: start;
+  justify-content: start;
+}
+.justify-center{
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.justify-space-between {
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.justify-space-around {
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+
+.align-center {
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+
+/****
+Current Day View
+*****/
+
+.current-day {
+  background: rgba(30, 150, 244, 1);
+  color: white;
+  height: 35%;
+  -webkit-transition: all ease-in 1s;
+  transition: all ease-in 0.25s;
+}
+
+.current-day.detail {
+  height: 100%;
+}
+
+.current-day.hide {
+  height: 0%;
+  overflow: hidden;
+}
+
+.day.detail {
+  height: 90vh;
+}
+
+.current-detail{
+  display: none;
+  height: 0;
+  transition: all ease-in 0.25s;
+}
+
+.current-detail.detail{
+  display: visible;
+  height: 50vh;
+}
+
+
+.day-summary {
+  padding-left: 50px;
+}
+
+.current-date {
+  font-size: 1.75rem;
+  letter-spacing: 2px;
+  padding-top: 20px;
+}
+
+.current-high {
+  font-size: 7rem;
+}
+
+.current-low {
+  font-size: 3rem;
+  padding-bottom: 25px;
+}
+
+.day-picture img {
+  max-height: 75%;
+}
+
+.current-status {
+  font-size: 3rem;
+  padding-bottom: 25px;
+}
+
+
+/****
+5 Day View
+*****/
+
+.five-day {
+  background: rgba(245, 245, 245, 1);
+  height: 60vh;
+  -webkit-transition: all ease-in 1s;
+  transition: all ease-in 0.25s;
+}
+
+.five-day.expand {
+  height: 100%;
+}
+
+.day {
+  height: 20%;
+  width: 100%;
+  padding: 10px;
+  -webkit-transition: all ease-in 1s;
+  transition: all ease-in 0.25s;
+}
+
+.day.hide {
+  height: 0;
+  overflow: hidden;
+  display: none;
+}
+
+.day-name{
+  font-size: 2rem;
+}
+.day-status{
+  font-size: 1.5rem;
+  padding-bottom: 5px;
+}
+
+.day-high{
+  text-align: right;
+  font-size: 2rem;
+}
+
+.day-low{
+  text-align: right;
+  font-size: 1.5rem;
+  padding-bottom: 5px;
+}
+
+/****
+Additional components
+*****/
+
+.back{
+  padding: 5px;
+  font-size: 1.7rem;
+}
+
+.additional-details{
+  height: 25vh;
+  font-size: 2rem;
+  padding-left: 50px;
+}
+
+.height-fix{
+  height: 100%;
+}
+
+.back.extra-padding{
+  padding: 15px;
+}
